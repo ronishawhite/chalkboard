@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/template/head.ejs %>
+</head>
+<body class="<%= classname %>">
+<% include partials/template/header.ejs %>
+
+<div class="container">
+    <div class="row">
+            <img class="img-responsive center-block" src="images/uabanner.png" class="img-responsive" alt="Ualbany Banner" style="width:500px;height:80px;" >
+            
+            <div>
+              <% include partials/template/login.ejs %>
+    </div><!-- row -->
+</div><!-- container -->
+
+  <% include partials/template/footer.ejs %>
+  <% include partials/template/jsdefaults.ejs %>
+</body>
+</html>

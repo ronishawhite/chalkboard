@@ -1,0 +1,137 @@
+
+
+<html>
+
+    <head>
+    <title>Login Form</title>
+    <%- include layouts/head.ejs %>	 
+   
+  
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!------ Include the above in your HEAD tag ---------->
+   
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css"
+    
+    </head>
+    
+    
+    <body>
+          
+
+   <div class="container">
+       <div class="row mgTp">
+           <form class="col-md-6 offset-md-3" action="/users/add" method="post" name="form1" >
+               <h3 class="title">Login</h3>
+               <hr class="divisor">
+               <div class="form-group">
+                   <label  for='email'>Username</label>
+           <input class='validate' type="text" name='username' id='email' required />
+               </div>
+               <div class="form-group">
+             <label for='password'>Password</label>
+             <input class='validate' type='password' name='password' id='password' required />
+               </div>
+               <div class="form-check">
+                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                   <label class="form-check-label" for="exampleCheck1">Remember me</label>
+               </div>
+         <button type="submit" class="btn btn-primary topBtn"><i class="fa fa-sign-in"></i> Login</button>
+         <button type="submit" class="btn btn-primary topBtn"><i class="fa fa-sign-in"></i> Sign up</button>
+           </form>
+       </div>
+   </div>
+
+    <!-- QUIZMASTER BS3 LOGIN -->
+
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h2 class="page-header">Account Login</h2>
+    <form method="post" action="/">
+        <div class="form-group">
+            <label>Mail</label>
+            <input type="email" name="mail" class="form-control" placeholder="Mail">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default center-block">Submit</button>
+        <div id="errorMessage"></div>
+        <!-- <a href="">Forgot your password?</a> -->
+    </form>
+</div>
+<script>
+</script>
+
+   <!-- QUIZMASTER BS3 USER NAVBAR-->
+   <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded=false">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="pull-brand" href="/"><img src="images/quizMakerLogoBrand.png" class="img-responsive" alt="Quiz Logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/takequiz">Take Quiz</a></li>
+                <li><a href="/results">Results</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ul>
+        </div><!-- navbar-collapes -->
+    </div><!-- container-fluid -->
+</nav>
+
+
+<!-- QUIZMASTER BS3 ADMIN NAVBAR-->
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded=false">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="pull-brand" href="/"><img src="images/quizMakerLogoBrand.png" class="img-responsive" alt="Quiz Logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/createquiz">Create Quiz</a></li>
+                    <li><a href="/takequiz">Take Quiz</a></li>
+                    <li><a href="/results">Results</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="/admin">Admin</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+        </div><!-- navbar-collapes -->
+    </div><!-- container-fluid -->
+</nav>
+
+
+<!-- CRUD CREATE -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+		<div class="row justify-content-center">
+		  <div class="col-4">
+<form  action="/users/question" method="post" name="form1">
+	
+  <div class="form-group">
+    <label>Question Type</label> 
+    <input style="width: 250px" class="form-control" id="questiontype" name="questiontype" type="questionType" value="<%= questionType %>">
+  </div>
